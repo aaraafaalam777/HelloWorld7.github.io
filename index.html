@@ -1,0 +1,51 @@
+<html>
+
+<!-- Load React API -->
+<script src= "https://unpkg.com/react@18/umd/react.production.min.js"></script>
+<!-- Load React DOM-->
+<script src= "https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+
+<!-- Load Babel Compiler -->
+<script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+
+<body>
+
+<!--
+A container to display react DOM elements
+-->
+
+<style>
+    p{
+        text-align: center;
+        padding-top: none;
+        font-size: 47px;
+        font-family: monospace;
+        font-weight: bolder;
+        color: aliceblue;
+    }
+
+    body{
+        
+        background-image: url('img/World Map.svg');
+    }
+  
+    
+</style>
+
+<div style="text-align: center; font-size: 51px; padding-top: 290px; font-family: cursive; color: antiquewhite;">
+    "Hello World !"
+    
+</div>
+
+<div id="comp1"></div>
+
+<script type="text/babel" >
+    const displayTime = () => {
+        const currDate = new Date();
+        ReactDOM.render(<p>{currDate.toString()} </p>, document.getElementById('comp1'));
+    }
+    setInterval(displayTime, 1000);</script>
+
+
+</body>
+</html>
